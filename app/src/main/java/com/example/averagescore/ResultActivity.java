@@ -1,6 +1,7 @@
 package com.example.averagescore;
 
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
@@ -31,6 +32,40 @@ public class ResultActivity extends AppCompatActivity {
                 "\nsum =" + sum +
                 "\naverage" + nf.format(average);
         tvResult.setText(Text);
+        alert(average);
+    }
+
+    private void alert(double average){
+        String message = new String();
+        String tilte = new String();
+        int pic = 0;
+        if(average==100){
+           message = "100";
+           tilte = "pass";
+           pic = R.drawable.circle;
+        }else if(average<=99 && average>=80){
+            message = "congratulation";
+            tilte = "pass";
+            pic = R.drawable.square;
+        }else if(average<=79 && average>=60){
+            message = "dangerous";
+            tilte = "pass";
+            pic = R.drawable.triangle;
+        }else{
+            message = "sorry";
+            tilte = "fail";
+            pic = R.drawable.fail;
+        }
+
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage(message);
+            builder.setTitle(tilte);
+            builder.setIcon(pic);
+            builder.setPositiveButton("OK",null);
+            builder.setNegativeButton("Cancel",null);
+            builder.setNeutralButton("Nothing",null);
+            builder.show();
     }
     public void onBackClick(View view){ finish();}
 }
