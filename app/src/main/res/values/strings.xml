@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">averagescore</string>
+    <string name="etProgramming">etProgramming</string>
+    <string name="SUBMIT">SUBMIT</string>
+    <string name="result">result</string>
+    <string name="Button">Button</string>
+    <string name="BACK">BACK</string>
+</resources>

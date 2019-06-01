@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="241dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:autoText="false"
+        android:text="Scores of Final Exam"
+        android:textSize="24sp"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etProgramming"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:ems="10"
+        android:hint="Programming"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/etDataStructure"
+        android:layout_width="wrap_content"
+        android:layout_height="49dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Data Structure"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/etProgramming"
+        app:layout_constraintStart_toStartOf="@+id/etProgramming"
+        app:layout_constraintTop_toBottomOf="@+id/etProgramming" />
+
+    <EditText
+        android:id="@+id/etAlgorithm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Algorithm"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/etDataStructure"
+        app:layout_constraintStart_toStartOf="@+id/etDataStructure"
+        app:layout_constraintTop_toBottomOf="@+id/etDataStructure" />
+
+    <Button
+        android:id="@+id/btSubmit"
+        android:layout_width="142dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="onSubmitClick"
+        android:text="@string/SUBMIT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/etAlgorithm"
+        app:layout_constraintHorizontal_bias="0.563"
+        app:layout_constraintStart_toStartOf="@+id/etAlgorithm"
+        app:layout_constraintTop_toBottomOf="@+id/etAlgorithm"
+        app:layout_constraintVertical_bias="0.059" />
+
+</android.support.constraint.ConstraintLayout>
