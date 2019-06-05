@@ -20,7 +20,7 @@ private EditText etProgramming,etDataStructure,etAlogorithm;
         etAlogorithm = (EditText)findViewById(R.id.etAlgorithm);
     }
     private boolean isValid(EditText editText){
-        String pattern = "1[0]{2}|[0~9]{1,2}";
+        String pattern = "1[0]{2}|[0-9]{1,2}";
         String text = editText.getText().toString();
         if(!text.matches(pattern)){
             editText.setError("0~100");
